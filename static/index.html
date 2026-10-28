@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fresh Air Match</title>
+  <meta name="description" content="Private, local-first semantic matching for safe micro-adventures.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">LOCAL OPEN-MODEL MATCHING</p>
+      <h1>Fresh Air Match</h1>
+      <p class="lede">Describe the kind of break you need. A local MiniLM model ranks safe, time-bounded micro-adventures without receiving your location or sending preferences to a server.</p>
+      <div class="trust"><span>✓ Local inference</span><span>✓ No account</span><span>✓ Accessibility filters first</span></div>
+    </header>
+
+    <section class="panel">
+      <form id="match-form">
+        <div class="grid">
+          <label>Time available
+            <select name="minutes"><option value="15">15 minutes</option><option value="30" selected>30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select>
+          </label>
+          <label>Energy
+            <select name="energy"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select>
+          </label>
+          <label>Access needs
+            <select name="mobility"><option value="standard">No specific filter</option><option value="step_free" selected>Step-free route</option><option value="seated">Seated activity</option></select>
+          </label>
+          <label>Setting
+            <select name="setting"><option value="any">Any</option><option value="balcony">Balcony / doorstep</option><option value="neighbourhood">Neighbourhood</option><option value="park" selected>Park</option></select>
+          </label>
+          <label>Company
+            <select name="social"><option value="any">Either</option><option value="solo" selected>Solo</option><option value="partner">With a partner</option></select>
+          </label>
+          <label>Conditions
+            <select name="weather"><option value="any">Any safe conditions</option><option value="clear" selected>Clear / dry</option><option value="cold">Cold</option><option value="hot">Hot</option><option value="light_rain">Light rain</option></select>
+          </label>
+        </div>
+        <label class="wide">What sounds good right now?
+          <textarea name="note" maxlength="500" rows="3" placeholder="Example: quiet trees, sketching, and noticing things I normally walk past"></textarea>
+        </label>
+        <button type="submit">Match my micro-adventure <span aria-hidden="true">→</span></button>
+        <p class="fine">This app does not verify routes, weather, accessibility, or medical suitability. Use familiar public places and your own judgement.</p>
+      </form>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="results" class="results" aria-live="polite"></section>
+
+    <footer>
+      <strong>Why open AI?</strong> The pinned open MiniLM model runs on your CPU. Your mood, access needs, and routine stay on this machine, and the ranking logic remains inspectable and replaceable.
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
+
