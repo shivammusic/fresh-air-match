@@ -5,9 +5,10 @@ open `sentence-transformers/all-MiniLM-L6-v2` model through ONNX Runtime to rank
 a curated catalogue against a person's mood and interests, after deterministic
 filters enforce their time, access, setting, company, and weather choices.
 
-This is a **retrospective build inspired by the concluded Hacktoberfest 2026
-Week 1 “Touch Grass” prompt**. It was created after that challenge closed and is
-not presented as an eligible contest entry or sticker claim.
+This project was created after the public Hacktoberfest 2026 Week 1 “Touch
+Grass” deadline. Hacktoberfest Support subsequently authorized an individual
+late-submission review by email. That exception permits review of the project;
+it does **not** guarantee contest prizes, rankings, a badge, or dashboard credit.
 
 ## What makes it useful
 

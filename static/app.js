@@ -51,3 +51,8 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
+if (new URLSearchParams(window.location.search).get('demo') === '1') {
+  form.elements.note.value = 'quiet trees, sketching, and mindful observation';
+  form.requestSubmit();
+}
+
